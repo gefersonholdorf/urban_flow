@@ -1,0 +1,9 @@
+@base_url=http://localhost:3000/routes
+
+POST {{base_url}}
+Content-Type: application/json
+
+{
+    "name": "Doutor Pedrinho/Timbó",
+    "code": "RDPT01"
+}

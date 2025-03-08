@@ -1,98 +1,27 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+### UrbanFlow
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+O UrbanFlow é uma plataforma voltada para a gestão de transporte público, com foco no planejamento de rotas e monitoramento da capacidade de passageiros dos veículos. O sistema permite que os gestores organizem as rotas de ônibus, ajustem horários e distribuam os veículos de forma eficiente com base na quantidade de passageiros. Sem o acompanhamento em tempo real, o sistema foca em estimativas de demanda e análises históricas para ajustar as operações de forma a melhorar a experiência dos passageiros e aumentar a eficiência do serviço.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+### Problema a Ser Resolvido:
+O sistema busca resolver a alocação ineficiente de veículos no transporte público e a superlotação, permitindo que os gestores planejem as rotas e a distribuição dos ônibus de acordo com a demanda histórica e estimada. Além disso, a falta de informações claras sobre as rotas e horários para os passageiros é abordada.
 
-## Description
+### Regras de Negócio:
+- [ ] Gestão de Rotas: Cada rota de transporte deve ter informações sobre pontos de parada, horários de operação e veículos atribuídos.
+- [ ] Capacidade de Veículos: O sistema deve monitorar a quantidade de passageiros nos ônibus, possibilitando ajustes nas rotas e horários com base em padrões de lotação.
+- [ ] Ajuste de Frota: Durante horários de pico, o sistema pode sugerir ajustes na quantidade de veículos em uma rota, com base em dados históricos de lotação.
+- [ ] Planejamento de Horários: O sistema deve permitir o planejamento de horários para garantir que a capacidade dos veículos seja suficiente para a demanda, sem superlotação.
+- [ ] Alertas de Demanda Alta: O sistema deve alertar os gestores sobre uma possível alta demanda para determinadas rotas em horários específicos, para que ajustes possam ser feitos com antecedência.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+### Requisitos Funcionais:
+- [ ] Gestão de Frota e Rotas: O sistema deve permitir o cadastro e a atualização das rotas, pontos de parada e veículos atribuídos a cada rota.
+- [ ] Controle de Lotação: O sistema deve permitir que os gestores registrem e monitorem a quantidade de passageiros por veículo, utilizando dados históricos e previsões de demanda.
+- [ ] Planejamento de Horários: Os gestores devem poder criar e ajustar os horários de operação dos ônibus, considerando a demanda prevista e a capacidade dos veículos.
+- [ ] Consultas de Rota: Os passageiros devem poder consultar as rotas, horários e a capacidade média dos veículos para planejar suas viagens.
+- [ ] Relatórios de Performance: O sistema deve gerar relatórios sobre a performance das rotas e veículos, como a média de lotação ao longo do tempo e eficiência na distribuição de veículos. 
 
-## Project setup
-
-```bash
-$ npm install
-```
-
-## Compile and run the project
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Run tests
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
-```bash
-$ npm install -g mau
-$ mau deploy
-```
-
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+### Requisitos Não Funcionais:
+- [ ] Desempenho: O sistema deve ser eficiente ao processar e calcular a distribuição de veículos e a capacidade dos ônibus, mesmo com uma grande quantidade de dados históricos.
+- [ ] Escalabilidade: O sistema deve ser escalável para adicionar novas rotas, veículos e cidades conforme necessário, sem afetar a performance.
+- [ ] Segurança: O sistema deve garantir que apenas usuários autorizados possam modificar as rotas e alocar os veículos.
+- [ ] Disponibilidade: O sistema deve garantir alta disponibilidade para que os gestores possam acessar informações importantes sobre as rotas e a alocação de veículos a qualquer momento.
+- [ ] Usabilidade: O sistema deve ser intuitivo para gestores e passageiros, facilitando a consulta de informações e o planejamento de rotas.
